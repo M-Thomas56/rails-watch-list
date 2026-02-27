@@ -1,1 +1,15 @@
-<p>coucou</p>
+<div>
+  <h1>Save any kind of movie</h1>
+</div>
+  <p>--------------------------------------------------</p>
+<div>
+  <h2>My lists</h2>
+    <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</div>
+<p>--------------------------------------------------</p>
+<div>
+<%= link_to "Add a new list", new_list_path %>
+</div>
+  <p>--------------------------------------------------</p>
